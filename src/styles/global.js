@@ -1,5 +1,8 @@
+//Importações de dependecias
 import { createGlobalStyle } from 'styled-components';
 
+//Estilização padronizada do sistema
+//Arquivo importado no App.js
 export default createGlobalStyle`
   *{
     margin: 0;

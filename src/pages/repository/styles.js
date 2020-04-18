@@ -1,16 +1,21 @@
+//Importe das dependências
 import styled from 'styled-components';
 
+//constante Loading que passa a ser uma div
 export const Loading = styled.div`
   color: #fff;
   font-size: 30px;
   font-weight: bold;
   display: flex;
+  /* Alinha ao centro verticalmente e horizontalmente o conteúdo do elemento */
   justify-content: center;
   align-items: center;
   height: 100vh;
 `;
 
+//*********** Owner
 export const Owner = styled.header`
+  /* Faz os itens ficarem em baixo um do outro e centralizados verticalmente */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -42,6 +47,7 @@ export const Owner = styled.header`
   }
 `;
 
+//*********** IssueList
 export const IssueList = styled.ul`
   padding-top: 30px;
   margin-top: 30px;

@@ -1,5 +1,7 @@
+//Importações de dependecias
 import React from 'react';
 
+//Impotações de arquivos
 import Routes from './routes';
 import GlobalStyle from './styles/global';
 

@@ -1,7 +1,8 @@
+//Importações de dependecias
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-//Importe das paginas
+//Impotações de arquivos
 import Main from './pages/main';
 import Repository from './pages/repository';
 
@@ -17,7 +18,12 @@ export default function Routes() {
           exact
           component={Main}
         />
-        <Route path="/repository/:repository" exact component={Repository} />
+        <Route
+          //Essa rota recebe como parâmetro o nome de um repositório
+          path="/repository/:repository"
+          exact
+          component={Repository}
+        />
       </Switch>
     </BrowserRouter>
   );

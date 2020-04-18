@@ -1,7 +1,9 @@
 import styled, { keyframes, css } from 'styled-components';
 
+//*********** Form
 export const Form = styled.form`
   margin-top: 30px;
+  /* Faz com que os elementos dentro do form fiquem lado a lado */
   display: flex;
   flex-direction: row;
 
@@ -14,6 +16,7 @@ export const Form = styled.form`
   }
 `;
 
+//*********** Rotate
 const rotate = keyframes`
   from{
     transform: rotate(0deg);
@@ -24,8 +27,10 @@ const rotate = keyframes`
   }
 `;
 
+//*********** SubmitButton
 export const SubmitButton = styled.button.attrs((props) => ({
   type: 'submit',
+  //Atribui loading a disabled
   disabled: props.loading,
 }))`
   background-color: #7159c1;
@@ -34,10 +39,12 @@ export const SubmitButton = styled.button.attrs((props) => ({
   margin-left: 10px;
   border-radius: 4px;
 
+  /* Alinha ao centro vertical e horizontal */
   display: flex;
   justify-content: center;
   align-items: center;
 
+  /* Caso loading/disabled for true  */
   &[disabled] {
     cursor: not-allowed;
     opacity: 0.6;
@@ -46,12 +53,15 @@ export const SubmitButton = styled.button.attrs((props) => ({
   ${(props) =>
     props.loading &&
     css`
+      /* Adiciona uma animação ao ícone caso loading seja true */
       svg {
+        /* Rotaciona a cada 2 segundos de forma linear e infinita */
         animation: ${rotate} 2s linear infinite;
       }
     `}
 `;
 
+//*********** List
 export const List = styled.ul`
   list-style: none;
   margin-top: 30px;
@@ -59,8 +69,11 @@ export const List = styled.ul`
   li {
     padding: 15px 0;
     display: flex;
+    /* Faz com que os elementos dentro da li fiquem lado a lado */
     flex-direction: row;
+    /* Deixa cada elemento nas extremidades (left e right) */
     justify-content: space-between;
+    /* Alinha ao centro vertical */
     align-items: center;
 
     /* Aplica em todos exceto no primeiro */

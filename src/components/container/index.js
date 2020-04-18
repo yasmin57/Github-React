@@ -1,5 +1,7 @@
+//Importe das dependências
 import styled from 'styled-components';
 
+//constante container que passa a ser uma div
 const Container = styled.div`
   max-width: 700px;
   background: #fff;
@@ -11,6 +13,7 @@ const Container = styled.div`
   h1 {
     font-size: 20px;
     display: flex;
+    /* Faz os itens ficarem lado a lado e centralizados verticalmente */
     flex-direction: row;
     align-items: center;
 
@@ -20,4 +23,5 @@ const Container = styled.div`
   }
 `;
 
+//Exporta a constante
 export default Container;
